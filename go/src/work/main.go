@@ -34,8 +34,6 @@ func HandlerUserConfirm(w http.ResponseWriter, r *http.Request) {
 		"comment": r.FormValue("comment"),
 	}
 
-	fmt.Println(values)
-
 	if err := tpl.ExecuteTemplate(w, "view.html", values); err != nil {
 		fmt.Println(err)
 	}
